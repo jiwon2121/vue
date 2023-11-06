@@ -10,11 +10,11 @@
 <body>
   <div id="app">
     <!-- [Bad] v-for with v-if -->
-    <ul>
+    <!-- <ul>
       <li v-for="todo in todos" v-if="!todo.isComplete" :key="todo.id">
         {{ todo.name }}
       </li>
-    </ul>
+    </ul> -->
 
     <!-- [Good] v-for with v-if & computed-->
     <ul>
@@ -51,7 +51,7 @@
         ])
 
         const completeTodos = computed(() => {
-          return todos.value.filter(() => !todo.isComplete)
+          return todos.value.filter(() => !todos.value.isComplete)
         })
 
         return {
